@@ -16,7 +16,7 @@ function capturarDatosGuardar(event) {
 var seleccionarPrioridad = document.querySelector('#prioridadFilter');
 seleccionarPrioridad.addEventListener('change', capturarPrioridad);
 
-
+//Evento de capturar por prioridad
 function capturarPrioridad(event) {
     var prioridad = event.target.value;
     if (prioridad != "") {
@@ -30,6 +30,7 @@ function capturarPrioridad(event) {
 
 var campoBusqueda = document.getElementById('search');
 campoBusqueda.addEventListener('keyup', recojerBusqueda) //Utilizo el evento keyup para el buscador.
+
 
 function recojerBusqueda(event) {
     var palabra = event.target.value;

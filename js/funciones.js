@@ -46,7 +46,7 @@ function buscarporTarea(pLista, pPalabraBuscar) {
     var listaFiltrada = new Array();
 
     listaFiltrada = pLista.filter(function (tarea) {
-        return tarea.titulo.toLowerCase() == pPalabraBuscar.toLowerCase();
+        return tarea.titulo.toLowerCase().includes(pPalabraBuscar.toLowerCase());
     })
     return listaFiltrada;
 }
