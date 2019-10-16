@@ -14,9 +14,9 @@ function capturarDatosGuardar(event) {
         pintarUnaTarea(nuevaTarea);
     } else {
         document.querySelector('#mensaje').innerText = 'datos introducidos incorrectos'
-
     }
-
+    inputGuardar.value = '';
+    selectGuardar.value = '';
 };
 
 var seleccionarPrioridad = document.querySelector('#prioridadFilter');
