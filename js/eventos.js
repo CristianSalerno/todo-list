@@ -39,6 +39,7 @@ campoBusqueda.addEventListener('keyup', recojerBusqueda) //Utilizo el evento key
 
 
 function recojerBusqueda(event) {
+    seleccionarPrioridad.value = '';
     var palabra = event.target.value;
     var listaFiltrada = buscarporTarea(listaTareas, palabra);
     pintarTareas(listaFiltrada);
