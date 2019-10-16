@@ -20,6 +20,7 @@
 				<form action="#" method="get">
 					<input type="text" id="tituloTarea" placeholder="Introduce una tarea">
 					<select id="prioridad" required>
+						<!--Required solo funciona en algunos Navegadores-->
 						<option value="">Selecciona una prioridad</option>
 						<option value="urgente">Urgente</option>
 						<option value="diaria">Diaria</option>
@@ -28,7 +29,7 @@
 
 					<input type="submit" id="guardar" value="Guardar">
 				</form>
-
+				<p id="mensaje"></p>
 
 			</div>
 

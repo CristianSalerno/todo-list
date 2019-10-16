@@ -79,4 +79,6 @@ footer {
 #mensaje {
 	color: red;
 	text-align: center;
+	padding: 10px;
+	margin-top: 10px;
 }

@@ -6,11 +6,17 @@ btnGuardar.addEventListener('click', capturarDatosGuardar);
 
 //Evento del boton guardar una tarea.
 function capturarDatosGuardar(event) {
+    document.querySelector('#mensaje').innerText = ''
     var tituloGuardar = inputGuardar.value;
     var prioridadGuardar = selectGuardar.value;
+    if (tituloGuardar != '' && prioridadGuardar != '') {
+        var nuevaTarea = guardarTarea(tituloGuardar, prioridadGuardar);
+        pintarUnaTarea(nuevaTarea);
+    } else {
+        document.querySelector('#mensaje').innerText = 'datos introducidos incorrectos'
 
-    var nuevaTarea = guardarTarea(tituloGuardar, prioridadGuardar);
-    pintarUnaTarea(nuevaTarea);
+    }
+
 };
 
 var seleccionarPrioridad = document.querySelector('#prioridadFilter');
@@ -36,4 +42,14 @@ function recojerBusqueda(event) {
     var palabra = event.target.value;
     var listaFiltrada = buscarporTarea(listaTareas, palabra);
     pintarTareas(listaFiltrada);
+}
+
+inputGuardar.addEventListener('focus', recargar);
+
+function recargar(event) {
+    event.target.value = '';
+    inputGuardar.value = '';
+    campoBusqueda.value = '';
+    seleccionarPrioridad.value = '';
+    pintarTareas(listaTareas);
 }
