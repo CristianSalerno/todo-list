@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TODO's list Cristian</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/modelo.js"></script>
+</head>
+
+<body>
+
+
+	<div id="wrapper">
+
+		<header>
+
+			<div class="insert">
+				<form action="#" method="get">
+					<input type="text" id="tituloTarea" placeholder="Introduce una tarea">
+					<select id="prioridad" required>
+						<option value="">Selecciona una prioridad</option>
+						<option value="urgente">Urgente</option>
+						<option value="diaria">Diaria</option>
+						<option value="mensual">Mensual</option>
+					</select>
+
+					<input type="submit" id="guardar" value="Guardar">
+				</form>
+
+
+			</div>
+
+			<div class="filter">
+
+				<select id="prioridadFilter">
+					<option value="">Selecciona una prioridad</option>
+					<option value="urgente">Urgente</option>
+					<option value="diaria">Diaria</option>
+					<option value="mensual">Mensual</option>
+				</select>
+
+				<input type="text" id="search" placeholder="Introduce una tarea a buscar">
+
+
+			</div>
+
+		</header><!-- /header -->
+		<main>
+
+			<section class="tareas" id="tareas">
+				<!-- 
+				<article class="urgente" data-id="1">
+					<h2>Titulo de la tarea 1</h2>
+					<a href="#" title="Eliminar" onclick="borrarTarea(1);">Eliminar</a>
+				</article>
+
+				<article class="diaria" data-id="2">
+					<h2>Titulo de la tarea 2</h2>
+					<a href="#" title="Eliminar" onclick="borrarTarea(2);">Eliminar</a>
+				</article>
+
+				<article class="mensual" data-id="3">
+					<h2>Titulo de la tarea 3</h2>
+					<a href="#" title="Eliminar" onclick="borrarTarea(3);">Eliminar</a>
+				</article>
+ -->
+
+
+			</section>
+
+
+
+		</main>
+		<footer>
+			App to do Cristian
+		</footer>
+		<p id="mensaje"></p>
+	</div>
+	<script src="js/funciones.js"></script>
+	<script src="js/eventos.js"></script>
+</body>
+
+</html>
